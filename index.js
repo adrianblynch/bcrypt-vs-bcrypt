@@ -7,6 +7,8 @@ var rounds = 12;
 var iterations = 10;
 var hash, start, end, i, total;
 
+console.log("Bcrypts ready? Fight!");
+
 // bcrypt
 
 total = 0;
