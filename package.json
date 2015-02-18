@@ -1,0 +1,11 @@
+{
+  "name": "bcrypt-vs-bcrypt",
+  "version": "1.0.0",
+  "description": "Test various bcrypt modules for speed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian Lynch",
+  "license": "MIT"
+}
