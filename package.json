@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adrian Lynch",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^0.8.1",
+    "bcryptjs": "^2.1.0",
+    "twin-bcrypt": "^2.1.0"
+  }
 }
