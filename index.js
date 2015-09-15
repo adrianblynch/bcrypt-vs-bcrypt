@@ -4,8 +4,8 @@ var twinBcrypt = require('twin-bcrypt');
 var commander = require('commander');
 
 commander
-.option('-r, --rounds [num]', 'Number of rounds to use')
-.option('-i, --iterations [num]', 'Number of iterations to use')
+.option('-r, --rounds [num]', 'Number of rounds to use', parseInt)
+.option('-i, --iterations [num]', 'Number of iterations to use', parseInt)
 .parse(process.argv);
 
 var password = "password";
