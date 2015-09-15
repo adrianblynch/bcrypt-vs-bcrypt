@@ -11,6 +11,7 @@
   "dependencies": {
     "bcrypt": "^0.8.1",
     "bcryptjs": "^2.1.0",
+    "commander": "^2.8.1",
     "twin-bcrypt": "^2.1.0"
   }
 }

@@ -1,10 +1,16 @@
 var bcrypt = require('bcrypt');
 var bcryptJS = require('bcryptjs');
 var twinBcrypt = require('twin-bcrypt');
+var commander = require('commander');
+
+commander
+.option('-r, --rounds [num]', 'Number of rounds to use')
+.option('-i, --iterations [num]', 'Number of iterations to use')
+.parse(process.argv);
 
 var password = "password";
-var rounds = 12;
-var iterations = 10;
+var rounds = commander.rounds || 12;
+var iterations = commander.iterations || 10;
 var hash, start, end, i, total;
 
 console.log("Bcrypts ready? Fight!");
