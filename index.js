@@ -1,6 +1,7 @@
 var bcrypt = require('bcrypt');
-var bcryptJS = require('bcryptjs');
+var bcryptJs = require('bcryptjs');
 var twinBcrypt = require('twin-bcrypt');
+var bcryptNodeJs = require('bcrypt-nodejs');
 var commander = require('commander');
 
 commander
@@ -13,7 +14,9 @@ var rounds = commander.rounds || 12;
 var iterations = commander.iterations || 10;
 var hash, start, end, i, total;
 
-console.log("Bcrypts ready? Fight!");
+console.log(rounds + " rounds, " + iterations + " iterations");
+console.log("Bcrypts ready?");
+console.log("Fight!");
 
 // bcrypt
 
@@ -34,7 +37,7 @@ total = 0;
 
 for (i = 0; i < iterations; i++) {
 	start = new Date();
-	hash = bcryptJS.hashSync(password, bcryptJS.genSaltSync(rounds));
+	hash = bcryptJs.hashSync(password, bcryptJs.genSaltSync(rounds));
 	end = new Date();
 	total += (end - start);
 }
@@ -53,3 +56,16 @@ for (i = 0; i < iterations; i++) {
 }
 
 console.log("twin-bcrypt - " + iterations + " iterations took " + total + "ms which is an average of " + parseInt(total / iterations) + "ms each");
+
+// bcrypt-nodejs
+
+total = 0;
+
+for (i = 0; i < iterations; i++) {
+	start = new Date();
+	hash = bcryptNodeJs.hashSync(password, bcryptNodeJs.genSaltSync(rounds));
+	end = new Date();
+	total += (end - start);
+}
+
+console.log("bcrypt-nodejs - " + iterations + " iterations took " + total + "ms which is an average of " + parseInt(total / iterations) + "ms each");
