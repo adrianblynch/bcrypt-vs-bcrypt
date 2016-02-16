@@ -7,6 +7,7 @@ Pit various Bcrypt modules against each other to see the difference in speed.
 - [bcrypt](https://www.npmjs.com/package/bcrypt)
 - [bcryptjs](https://www.npmjs.com/package/bcryptjs)
 - [twin-bcrypt](https://www.npmjs.com/package/twin-bcrypt)
+- [bcrypt-nodejs](https://www.npmjs.com/package/bcrypt-nodejs)
 
 ## The fight
 
