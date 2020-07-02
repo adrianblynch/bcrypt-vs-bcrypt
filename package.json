@@ -9,7 +9,7 @@
   "author": "Adrian Lynch",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^0.8.1",
+    "bcrypt": "^5.0.0",
     "bcrypt-nodejs": "0.0.3",
     "bcryptjs": "^2.1.0",
     "commander": "^2.8.1",
